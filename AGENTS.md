@@ -3,6 +3,7 @@
 ## 正本
 
 - 概要・利用方法は `README.md`、Pull Requestの記載項目は `.github/PULL_REQUEST_TEMPLATE.md` を正とする。
+- 領域の責務、実行入口、依存方向は [ARCHITECTURE.md](ARCHITECTURE.md) を正とする。
 - 設計判断・仕様・運用手順はリポジトリ内のMarkdownで管理する。`AGENTS.md` には入口と必須ルールだけを置く。
 - 文書を新規作成・更新するときは [`docs/README.md`](docs/README.md) と対象文書群の `index.md` に従う。作成・索引更新・リンク確認までを一つの変更として完了する。
 

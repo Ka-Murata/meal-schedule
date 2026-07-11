@@ -17,7 +17,7 @@
 ## 使い方
 
 1. このリポジトリを複製し、対象プロダクトの目的・利用者・起動方法をここへ記載します。
-2. `AGENTS.md`に不変条件、検証コマンド、ディレクトリ案内を追加します。
+2. `AGENTS.md`に不変条件と検証コマンドを、[ARCHITECTURE.md](ARCHITECTURE.md)に実装領域と依存方向を追加します。
 3. [ドキュメントの作業手順](docs/README.md)に従い、必要な仕様・設計・計画を作成します。
 
 ## 情報の置き場所
@@ -26,6 +26,7 @@
 | --- | --- | --- |
 | リポジトリの概要・導入方法 | `README.md` | 人とエージェントの最初の入口 |
 | 作業時の必須ルール | `AGENTS.md` | 簡潔な運用ルールと詳細情報への案内 |
+| 全体構成・依存方向 | [ARCHITECTURE.md](ARCHITECTURE.md) | 領域の責務、実行入口、依存ルールの案内 |
 | Pull Requestの記載項目 | `.github/PULL_REQUEST_TEMPLATE.md` | 変更理由・影響・検証を揃える |
 | プロダクト仕様 | [`docs/product-specs/`](docs/product-specs/index.md) | 利用者の振る舞い、スコープ、受け入れ条件 |
 | 設計判断 | [`docs/design-docs/`](docs/design-docs/index.md) | 背景、選択肢、決定、影響 |
