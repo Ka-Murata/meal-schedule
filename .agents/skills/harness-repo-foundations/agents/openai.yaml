@@ -1,0 +1,4 @@
+interface:
+  display_name: "Harness Repository Foundations"
+  short_description: "エージェント向けの構成と正本ドキュメントを整備するスキル"
+  default_prompt: "Use $harness-repo-foundations to design this repository structure and its agent-readable documentation."
