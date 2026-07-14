@@ -113,6 +113,26 @@ class ShoppingAndRenderTests(unittest.TestCase):
 
 
 class StoreAndCliTests(unittest.TestCase):
+    def test_cli_validates_preferences_without_a_plan(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            preferences_path = Path(directory) / "preferences.json"
+            preferences_path.write_text(
+                json.dumps(sample_preferences(), ensure_ascii=False), encoding="utf-8"
+            )
+            output = io.StringIO()
+            with redirect_stdout(output):
+                self.assertEqual(
+                    0,
+                    run(["--preferences", str(preferences_path), "validate-preferences"]),
+                )
+            self.assertEqual("設定は有効です\n", output.getvalue())
+
+    def test_cli_preferences_validation_requires_a_path(self) -> None:
+        error = io.StringIO()
+        with redirect_stderr(error):
+            self.assertEqual(2, run(["validate-preferences"]))
+        self.assertIn("--preferences が必要", error.getvalue())
+
     def test_save_then_find_by_overlapping_period(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             store = PlanStore(directory)

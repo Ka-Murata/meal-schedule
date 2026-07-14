@@ -1,6 +1,6 @@
 ---
 name: plan-meals
-description: Plan, validate, save, and retrieve daily or weekly meal schedules with per-dish ingredients, cooking steps, aggregated shopping lists, and history-aware variety. Use when the user asks Codex to plan meals, decide this week's menu, produce recipes or a shopping list, record an agreed meal plan, review past meals, or avoid recently repeated dishes in this repository.
+description: Set up meal preferences and plan, validate, save, or retrieve daily or weekly meal schedules with per-dish ingredients, cooking steps, aggregated shopping lists, and history-aware variety. Use when the user asks Codex for first-time setup, preference changes, meal planning, recipes, a shopping list, saving an agreed plan, reviewing past meals, or avoiding recently repeated dishes in this repository.
 ---
 
 # Plan meals
@@ -9,10 +9,25 @@ Use the repository CLI as the source of truth for validation, history, shopping-
 
 ## Choose the workflow
 
+- For first-time setup or preference changes, follow **Set up preferences**.
 - For a new plan, follow **Plan a period**.
 - For “save this” or equivalent, follow **Confirm and save**. Reuse the proposal from the current conversation; do not silently regenerate it.
 - For past plans, follow **Review history**.
-- For changing preferences, validate `config/preferences.json` before using it.
+
+## Set up preferences
+
+1. Work from the repository root and inspect `config/preferences.json` if it exists. For changes, preserve values the user did not ask to change.
+2. Ask for the required values that are not already known: household size, included meal types, and whether anyone has food allergies. Never assume there are no allergies. Clearly separate allergies from dislikes.
+3. Offer the example defaults for optional values instead of requiring them: maximum cooking time 45 minutes, weekly budget 8,000 yen, and Monday as the first day of the week. Let the user omit either numeric limit. Ask follow-up questions only when an answer is ambiguous or unsafe to encode.
+4. Summarize the proposed settings in plain language, including an explicit allergy statement, and ask the user to confirm before writing personal information to `config/preferences.json`.
+5. After confirmation, create `config/preferences.json` with schema version 1 and these fields: `household_size`, `meals`, `allergies`, `dislikes`, optional `max_cooking_minutes`, optional `weekly_budget_yen`, and `week_starts_on`. Use empty arrays for confirmed “none”; do not encode an unanswered allergy question as an empty array.
+6. Validate the saved settings:
+
+   ```bash
+   python3 -m meal_schedule --preferences config/preferences.json validate-preferences
+   ```
+
+7. Report validation success and the saved path. If validation fails, correct the draft and validate again; do not proceed to meal planning with invalid settings.
 
 ## Plan a period
 
@@ -24,7 +39,7 @@ Use the repository CLI as the source of truth for validation, history, shopping-
    ```
 
    The command validates both files together after a proposal exists. Before generation, inspect the preferences JSON directly.
-3. If preferences are absent, ask only for information that materially changes the result: household size, included meal types, and whether anyone has food allergies. Never assume there are no allergies. Offer reasonable defaults for optional constraints such as cooking time and budget.
+3. If preferences are absent, follow **Set up preferences** before planning. If the user does not want to save settings, collect the same required values for this proposal only and state that they will not persist.
 4. Resolve relative dates using the current date and show exact `YYYY-MM-DD` dates. Honor `week_starts_on` when available.
 5. Inspect recent dishes before proposing replacements:
 

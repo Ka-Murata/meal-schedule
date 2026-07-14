@@ -42,6 +42,8 @@ def create_parser() -> argparse.ArgumentParser:
     parser.add_argument("--preferences", type=Path, default=None)
     subparsers = parser.add_subparsers(dest="command", required=True)
 
+    subparsers.add_parser("validate-preferences", help="利用者設定JSONを検証する")
+
     validate_parser = subparsers.add_parser("validate", help="献立JSONを検証する")
     validate_parser.add_argument("plan", type=Path)
 
@@ -66,6 +68,11 @@ def run(arguments: Sequence[str] | None = None) -> int:
     try:
         preferences = load_preferences(args.preferences)
         store = PlanStore(args.data_dir)
+        if args.command == "validate-preferences":
+            if args.preferences is None:
+                raise ValidationError("validate-preferences には --preferences が必要です")
+            print("設定は有効です")
+            return 0
         if args.command in {"validate", "save"}:
             plan = load_json(args.plan, "献立")
             validate_plan(plan, preferences)
