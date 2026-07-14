@@ -120,6 +120,14 @@ python3 -m meal_schedule --preferences config/preferences.json show --from YYYY-
 
 Return the stored output without inventing missing plans. If the CLI says no plan exists, say so and offer to create one.
 
+If the user asks for a browser view, a visually organized view, or a printable view, export the same stored period as a self-contained HTML file instead:
+
+```bash
+python3 -m meal_schedule --preferences config/preferences.json show --from YYYY-MM-DD --to YYYY-MM-DD --format html --output /tmp/meal-schedule-YYYY-MM-DD-to-YYYY-MM-DD.html
+```
+
+Return the generated path and explain that the file can be opened locally in a browser. The HTML uses no external service or network resource. Do not claim that shopping checkbox state is saved; it is temporary and does not change the stored plan.
+
 ## Handle failures
 
 - Surface CLI validation errors and correct the proposal; never bypass validation.

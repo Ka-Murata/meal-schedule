@@ -1,0 +1,20 @@
+{
+  "name": "harness-engineering-devcontainer",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    },
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "openai.chatgpt"
+      ]
+    }
+  },
+  "postCreateCommand": "npm install -g @openai/codex",
+  "remoteUser": "vscode"
+}
