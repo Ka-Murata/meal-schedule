@@ -1,0 +1,4 @@
+interface:
+  display_name: "ハーネス運用ふりかえり"
+  short_description: "運用の実証から共通改善を見つけ、フォーク元への還元候補を整理"
+  default_prompt: "$review-harness-usage を使って、前回以降のハーネス運用をふりかえり、根拠のある還元候補を整理してください。"
