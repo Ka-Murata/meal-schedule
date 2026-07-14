@@ -17,6 +17,7 @@
 | 設定・献立の正常系と境界条件を検証する | `python3 -m unittest discover -s tests -v` | テスト結果 |
 | 保存、期間検索、再表示、重複候補取得が一連で動く | CLI結合テスト | `StoreAndCliTests` |
 | 材料を集約し、料理との対応を保つ | 買い物リスト単体テスト | `ShoppingAndRenderTests` |
+| 静的HTMLが外部通信なしで安全に表示内容を整形する | HTMLレンダー・CLI書き出しテスト | `ShoppingAndRenderTests` と `StoreAndCliTests` |
 | 禁止食材、欠落日、人数不一致、破損履歴を拒否する | 入力・失敗系テスト | `ValidationTests` と `StoreAndCliTests` |
 | Pythonに構文エラーがない | `python3 -m compileall -q meal_schedule tests` | コマンド結果 |
 | Codexスキルの構成が有効 | `quick_validate.py .agents/skills/plan-meals` | 公式バリデータ結果 |
@@ -34,6 +35,9 @@
 
 - 2026-07-14: `python3 -m unittest discover -s tests -v` — 13件成功（文書リンクテスト追加前）。
 - 2026-07-14: `quick_validate.py .agents/skills/plan-meals` — `Skill is valid!`。
+- 2026-07-14: `python3 -m unittest discover -s tests -v` — 20件成功。静的HTMLのエスケープ、主要閲覧要素、期間指定書き出し、出力先の必須化を含む。
+- 2026-07-14: `python3 -m compileall -q meal_schedule tests`、`quick_validate.py .agents/skills/plan-meals`、`git diff --check` — 成功。
+- 2026-07-14: 実際の保存履歴に対する `show --format html --output` — 成功。7日・14食、レシピ、集約買い物リストを含む単一HTMLを生成。
 - 最終結果は [MVP実行計画](exec-plans/completed/2026-07-14-meal-planning-mvp.md) に記録する。
 
 ## 既知の課題

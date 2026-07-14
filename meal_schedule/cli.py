@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import Any, Sequence
 
 from .models import ValidationError, validate_plan, validate_preferences
-from .render import render_plan_markdown
+from .render import render_plan_markdown, render_plans_html
 from .store import PlanStore, dish_names
 
 
@@ -54,7 +54,10 @@ def create_parser() -> argparse.ArgumentParser:
     show_parser = subparsers.add_parser("show", help="保存済み献立を期間で表示する")
     show_parser.add_argument("--from", dest="start", type=parse_date)
     show_parser.add_argument("--to", dest="end", type=parse_date)
-    show_parser.add_argument("--format", choices=("markdown", "json"), default="markdown")
+    show_parser.add_argument(
+        "--format", choices=("markdown", "json", "html"), default="markdown"
+    )
+    show_parser.add_argument("--output", type=Path, help="表示結果をファイルへ保存する")
 
     recent_parser = subparsers.add_parser("recent-dishes", help="最近の料理名を提案用に表示する")
     recent_parser.add_argument("--days", type=int, default=28)
@@ -90,10 +93,26 @@ def run(arguments: Sequence[str] | None = None) -> int:
                 print("指定期間の献立はありません")
                 return 0
             if args.format == "json":
-                json.dump(plans, sys.stdout, ensure_ascii=False, indent=2)
-                print()
+                rendered = json.dumps(plans, ensure_ascii=False, indent=2) + "\n"
+            elif args.format == "html":
+                if args.output is None:
+                    raise ValidationError("--format html には --output が必要です")
+                rendered = render_plans_html(plans)
             else:
-                print("\n".join(render_plan_markdown(plan).rstrip() for plan in plans))
+                rendered = "\n".join(
+                    render_plan_markdown(plan).rstrip() for plan in plans
+                ) + "\n"
+            if args.output is None:
+                print(rendered, end="")
+            else:
+                try:
+                    args.output.parent.mkdir(parents=True, exist_ok=True)
+                    args.output.write_text(rendered, encoding="utf-8")
+                except OSError as error:
+                    raise ValidationError(
+                        f"表示結果を書き込めません: {args.output}: {error}"
+                    ) from error
+                print(args.output)
             return 0
         if args.command == "recent-dishes":
             if args.days <= 0:

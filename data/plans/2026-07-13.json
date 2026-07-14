@@ -1,0 +1,1010 @@
+{
+  "schema_version": 1,
+  "title": "2026年7月13日〜7月19日の作り置き弁当献立",
+  "start_date": "2026-07-13",
+  "end_date": "2026-07-19",
+  "servings": 1,
+  "meals": [
+    {
+      "date": "2026-07-13",
+      "meal_type": "昼食",
+      "dishes": [
+        {
+          "name": "ツナと小松菜の塩昆布混ぜご飯",
+          "servings": 1,
+          "ingredients": [
+            {
+              "name": "ご飯",
+              "quantity": 180,
+              "unit": "g",
+              "category": "穀類"
+            },
+            {
+              "name": "ツナ水煮缶",
+              "quantity": 1,
+              "unit": "缶",
+              "category": "魚介"
+            },
+            {
+              "name": "小松菜",
+              "quantity": 80,
+              "unit": "g",
+              "category": "野菜"
+            },
+            {
+              "name": "塩昆布",
+              "quantity": 8,
+              "unit": "g",
+              "category": "乾物・缶詰"
+            },
+            {
+              "name": "白いりごま",
+              "quantity": 3,
+              "unit": "g",
+              "category": "調味料"
+            },
+            {
+              "name": "ごま油",
+              "quantity": 5,
+              "unit": "ml",
+              "category": "調味料"
+            }
+          ],
+          "steps": [
+            "小松菜を2cm幅に切り、耐熱容器に入れて600Wで1分30秒加熱する。",
+            "水気を絞り、汁気を切ったツナ、塩昆布、白ごま、ごま油と和える。",
+            "温かいご飯に具を混ぜて盛る。"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-13",
+      "meal_type": "夕食",
+      "dishes": [
+        {
+          "name": "鶏照り焼きと彩り野菜の丼",
+          "servings": 1,
+          "ingredients": [
+            {
+              "name": "ご飯",
+              "quantity": 180,
+              "unit": "g",
+              "category": "穀類"
+            },
+            {
+              "name": "鶏もも肉",
+              "quantity": 120,
+              "unit": "g",
+              "category": "肉"
+            },
+            {
+              "name": "玉ねぎ",
+              "quantity": 50,
+              "unit": "g",
+              "category": "野菜"
+            },
+            {
+              "name": "ピーマン",
+              "quantity": 40,
+              "unit": "g",
+              "category": "野菜"
+            },
+            {
+              "name": "にんじん",
+              "quantity": 30,
+              "unit": "g",
+              "category": "野菜"
+            },
+            {
+              "name": "しょうゆ",
+              "quantity": 15,
+              "unit": "ml",
+              "category": "調味料"
+            },
+            {
+              "name": "みりん",
+              "quantity": 15,
+              "unit": "ml",
+              "category": "調味料"
+            },
+            {
+              "name": "砂糖",
+              "quantity": 5,
+              "unit": "g",
+              "category": "調味料"
+            },
+            {
+              "name": "サラダ油",
+              "quantity": 5,
+              "unit": "ml",
+              "category": "調味料"
+            }
+          ],
+          "steps": [
+            "翌日分と合わせて材料を準備し、鶏肉は一口大、玉ねぎは薄切り、ピーマンとにんじんは細切りにする。",
+            "油を熱したフライパンで鶏肉を皮目から4分、返して2分焼き、野菜を加えて3分炒める。",
+            "しょうゆ、みりん、砂糖を加え、汁気が少なくなるまで2〜3分絡める。半量を食べ、半量は粗熱を取ってすぐ冷蔵する。"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-14",
+      "meal_type": "昼食",
+      "dishes": [
+        {
+          "name": "鶏照り焼きと彩り野菜の丼弁当",
+          "servings": 1,
+          "ingredients": [
+            {
+              "name": "ご飯",
+              "quantity": 180,
+              "unit": "g",
+              "category": "穀類"
+            },
+            {
+              "name": "鶏もも肉",
+              "quantity": 120,
+              "unit": "g",
+              "category": "肉"
+            },
+            {
+              "name": "玉ねぎ",
+              "quantity": 50,
+              "unit": "g",
+              "category": "野菜"
+            },
+            {
+              "name": "ピーマン",
+              "quantity": 40,
+              "unit": "g",
+              "category": "野菜"
+            },
+            {
+              "name": "にんじん",
+              "quantity": 30,
+              "unit": "g",
+              "category": "野菜"
+            },
+            {
+              "name": "しょうゆ",
+              "quantity": 15,
+              "unit": "ml",
+              "category": "調味料"
+            },
+            {
+              "name": "みりん",
+              "quantity": 15,
+              "unit": "ml",
+              "category": "調味料"
+            },
+            {
+              "name": "砂糖",
+              "quantity": 5,
+              "unit": "g",
+              "category": "調味料"
+            },
+            {
+              "name": "サラダ油",
+              "quantity": 5,
+              "unit": "ml",
+              "category": "調味料"
+            }
+          ],
+          "steps": [
+            "前夜に翌日分も含めて調理し、粗熱を取ってすぐ冷蔵した取り分けを使う。",
+            "朝、中心まで十分熱くなるよう再加熱し、ご飯も温める。",
+            "ご飯とおかずを十分冷ましてから詰め、保冷剤を添える。"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-14",
+      "meal_type": "夕食",
+      "dishes": [
+        {
+          "name": "鮭ときのこの味噌バター焼き",
+          "servings": 1,
+          "ingredients": [
+            {
+              "name": "ご飯",
+              "quantity": 180,
+              "unit": "g",
+              "category": "穀類"
+            },
+            {
+              "name": "生鮭",
+              "quantity": 1,
+              "unit": "切れ",
+              "category": "魚介"
+            },
+            {
+              "name": "しめじ",
+              "quantity": 70,
+              "unit": "g",
+              "category": "野菜"
+            },
+            {
+              "name": "キャベツ",
+              "quantity": 100,
+              "unit": "g",
+              "category": "野菜"
+            },
+            {
+              "name": "味噌",
+              "quantity": 15,
+              "unit": "g",
+              "category": "調味料"
+            },
+            {
+              "name": "みりん",
+              "quantity": 10,
+              "unit": "ml",
+              "category": "調味料"
+            },
+            {
+              "name": "バター",
+              "quantity": 5,
+              "unit": "g",
+              "category": "乳製品"
+            },
+            {
+              "name": "黒こしょう",
+              "quantity": "少々",
+              "unit": "",
+              "category": "調味料"
+            }
+          ],
+          "steps": [
+            "翌日分と合わせ、しめじをほぐし、キャベツを3cm角に切る。味噌とみりんを混ぜる。",
+            "フライパンにキャベツ、しめじ、鮭を置き、味噌だれとバターをのせる。水大さじ2を加えて蓋をする。",
+            "中火で2分、弱火で8〜10分蒸し、鮭の中心まで火を通す。弁当分は骨を除き、粗熱を取ってすぐ冷蔵する。"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "meal_type": "昼食",
+      "dishes": [
+        {
+          "name": "鮭ときのこの味噌バター焼き弁当",
+          "servings": 1,
+          "ingredients": [
+            {
+              "name": "ご飯",
+              "quantity": 180,
+              "unit": "g",
+              "category": "穀類"
+            },
+            {
+              "name": "生鮭",
+              "quantity": 1,
+              "unit": "切れ",
+              "category": "魚介"
+            },
+            {
+              "name": "しめじ",
+              "quantity": 70,
+              "unit": "g",
+              "category": "野菜"
+            },
+            {
+              "name": "キャベツ",
+              "quantity": 100,
+              "unit": "g",
+              "category": "野菜"
+            },
+            {
+              "name": "味噌",
+              "quantity": 15,
+              "unit": "g",
+              "category": "調味料"
+            },
+            {
+              "name": "みりん",
+              "quantity": 10,
+              "unit": "ml",
+              "category": "調味料"
+            },
+            {
+              "name": "バター",
+              "quantity": 5,
+              "unit": "g",
+              "category": "乳製品"
+            },
+            {
+              "name": "黒こしょう",
+              "quantity": "少々",
+              "unit": "",
+              "category": "調味料"
+            }
+          ],
+          "steps": [
+            "前夜に翌日分も含めて調理し、粗熱を取ってすぐ冷蔵した取り分けを使う。",
+            "朝、中心まで十分熱くなるよう再加熱し、ご飯も温める。",
+            "ご飯とおかずを十分冷ましてから詰め、保冷剤を添える。"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "meal_type": "夕食",
+      "dishes": [
+        {
+          "name": "豚しょうが焼きとキャベツの丼",
+          "servings": 1,
+          "ingredients": [
+            {
+              "name": "ご飯",
+              "quantity": 180,
+              "unit": "g",
+              "category": "穀類"
+            },
+            {
+              "name": "豚こま切れ肉",
+              "quantity": 130,
+              "unit": "g",
+              "category": "肉"
+            },
+            {
+              "name": "玉ねぎ",
+              "quantity": 60,
+              "unit": "g",
+              "category": "野菜"
+            },
+            {
+              "name": "キャベツ",
+              "quantity": 80,
+              "unit": "g",
+              "category": "野菜"
+            },
+            {
+              "name": "しょうが",
+              "quantity": 8,
+              "unit": "g",
+              "category": "野菜"
+            },
+            {
+              "name": "しょうゆ",
+              "quantity": 15,
+              "unit": "ml",
+              "category": "調味料"
+            },
+            {
+              "name": "みりん",
+              "quantity": 15,
+              "unit": "ml",
+              "category": "調味料"
+            },
+            {
+              "name": "酒",
+              "quantity": 10,
+              "unit": "ml",
+              "category": "調味料"
+            },
+            {
+              "name": "サラダ油",
+              "quantity": 5,
+              "unit": "ml",
+              "category": "調味料"
+            }
+          ],
+          "steps": [
+            "翌日分と合わせ、玉ねぎを薄切り、キャベツを細切り、しょうがをすりおろす。",
+            "油を熱し、豚肉と玉ねぎを4〜5分炒め、肉に火が通ったらキャベツを加えて2分炒める。",
+            "しょうゆ、みりん、酒、しょうがを加え、汁気がほぼなくなるまで2分炒める。半量は粗熱を取って冷蔵する。"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-16",
+      "meal_type": "昼食",
+      "dishes": [
+        {
+          "name": "豚しょうが焼きとキャベツの丼弁当",
+          "servings": 1,
+          "ingredients": [
+            {
+              "name": "ご飯",
+              "quantity": 180,
+              "unit": "g",
+              "category": "穀類"
+            },
+            {
+              "name": "豚こま切れ肉",
+              "quantity": 130,
+              "unit": "g",
+              "category": "肉"
+            },
+            {
+              "name": "玉ねぎ",
+              "quantity": 60,
+              "unit": "g",
+              "category": "野菜"
+            },
+            {
+              "name": "キャベツ",
+              "quantity": 80,
+              "unit": "g",
+              "category": "野菜"
+            },
+            {
+              "name": "しょうが",
+              "quantity": 8,
+              "unit": "g",
+              "category": "野菜"
+            },
+            {
+              "name": "しょうゆ",
+              "quantity": 15,
+              "unit": "ml",
+              "category": "調味料"
+            },
+            {
+              "name": "みりん",
+              "quantity": 15,
+              "unit": "ml",
+              "category": "調味料"
+            },
+            {
+              "name": "酒",
+              "quantity": 10,
+              "unit": "ml",
+              "category": "調味料"
+            },
+            {
+              "name": "サラダ油",
+              "quantity": 5,
+              "unit": "ml",
+              "category": "調味料"
+            }
+          ],
+          "steps": [
+            "前夜に翌日分も含めて調理し、粗熱を取ってすぐ冷蔵した取り分けを使う。",
+            "朝、中心まで十分熱くなるよう再加熱し、ご飯も温める。",
+            "ご飯とおかずを十分冷ましてから詰め、保冷剤を添える。"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-16",
+      "meal_type": "夕食",
+      "dishes": [
+        {
+          "name": "鶏肉と夏野菜のトマトカレー",
+          "servings": 1,
+          "ingredients": [
+            {
+              "name": "ご飯",
+              "quantity": 180,
+              "unit": "g",
+              "category": "穀類"
+            },
+            {
+              "name": "鶏むね肉",
+              "quantity": 120,
+              "unit": "g",
+              "category": "肉"
+            },
+            {
+              "name": "なす",
+              "quantity": 80,
+              "unit": "g",
+              "category": "野菜"
+            },
+            {
+              "name": "ズッキーニ",
+              "quantity": 70,
+              "unit": "g",
+              "category": "野菜"
+            },
+            {
+              "name": "玉ねぎ",
+              "quantity": 50,
+              "unit": "g",
+              "category": "野菜"
+            },
+            {
+              "name": "カットトマト缶",
+              "quantity": 100,
+              "unit": "g",
+              "category": "乾物・缶詰"
+            },
+            {
+              "name": "カレー粉",
+              "quantity": 5,
+              "unit": "g",
+              "category": "調味料"
+            },
+            {
+              "name": "顆粒コンソメ",
+              "quantity": 3,
+              "unit": "g",
+              "category": "調味料"
+            },
+            {
+              "name": "サラダ油",
+              "quantity": 5,
+              "unit": "ml",
+              "category": "調味料"
+            },
+            {
+              "name": "水",
+              "quantity": 60,
+              "unit": "ml",
+              "category": "調味料"
+            }
+          ],
+          "steps": [
+            "翌日分と合わせ、鶏肉、なす、ズッキーニを2cm角、玉ねぎを粗みじんに切る。",
+            "油で鶏肉を3分炒め、野菜を加えて4分炒める。カレー粉を加え30秒炒める。",
+            "トマト、コンソメ、水を加え、蓋をずらして12分煮る。弁当分は浅い容器で素早く冷まし、冷蔵する。"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-17",
+      "meal_type": "昼食",
+      "dishes": [
+        {
+          "name": "鶏肉と夏野菜のトマトカレー弁当",
+          "servings": 1,
+          "ingredients": [
+            {
+              "name": "ご飯",
+              "quantity": 180,
+              "unit": "g",
+              "category": "穀類"
+            },
+            {
+              "name": "鶏むね肉",
+              "quantity": 120,
+              "unit": "g",
+              "category": "肉"
+            },
+            {
+              "name": "なす",
+              "quantity": 80,
+              "unit": "g",
+              "category": "野菜"
+            },
+            {
+              "name": "ズッキーニ",
+              "quantity": 70,
+              "unit": "g",
+              "category": "野菜"
+            },
+            {
+              "name": "玉ねぎ",
+              "quantity": 50,
+              "unit": "g",
+              "category": "野菜"
+            },
+            {
+              "name": "カットトマト缶",
+              "quantity": 100,
+              "unit": "g",
+              "category": "乾物・缶詰"
+            },
+            {
+              "name": "カレー粉",
+              "quantity": 5,
+              "unit": "g",
+              "category": "調味料"
+            },
+            {
+              "name": "顆粒コンソメ",
+              "quantity": 3,
+              "unit": "g",
+              "category": "調味料"
+            },
+            {
+              "name": "サラダ油",
+              "quantity": 5,
+              "unit": "ml",
+              "category": "調味料"
+            },
+            {
+              "name": "水",
+              "quantity": 60,
+              "unit": "ml",
+              "category": "調味料"
+            }
+          ],
+          "steps": [
+            "前夜に翌日分も含めて調理し、粗熱を取ってすぐ冷蔵した取り分けを使う。",
+            "朝、中心まで十分熱くなるよう再加熱し、ご飯も温める。",
+            "ご飯とおかずを十分冷ましてから詰め、保冷剤を添える。"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-17",
+      "meal_type": "夕食",
+      "dishes": [
+        {
+          "name": "厚揚げとひき肉の甘辛そぼろ煮",
+          "servings": 1,
+          "ingredients": [
+            {
+              "name": "ご飯",
+              "quantity": 180,
+              "unit": "g",
+              "category": "穀類"
+            },
+            {
+              "name": "厚揚げ",
+              "quantity": 150,
+              "unit": "g",
+              "category": "豆・大豆製品"
+            },
+            {
+              "name": "豚ひき肉",
+              "quantity": 80,
+              "unit": "g",
+              "category": "肉"
+            },
+            {
+              "name": "チンゲン菜",
+              "quantity": 100,
+              "unit": "g",
+              "category": "野菜"
+            },
+            {
+              "name": "長ねぎ",
+              "quantity": 30,
+              "unit": "g",
+              "category": "野菜"
+            },
+            {
+              "name": "しょうゆ",
+              "quantity": 15,
+              "unit": "ml",
+              "category": "調味料"
+            },
+            {
+              "name": "みりん",
+              "quantity": 15,
+              "unit": "ml",
+              "category": "調味料"
+            },
+            {
+              "name": "砂糖",
+              "quantity": 4,
+              "unit": "g",
+              "category": "調味料"
+            },
+            {
+              "name": "片栗粉",
+              "quantity": 3,
+              "unit": "g",
+              "category": "調味料"
+            },
+            {
+              "name": "水",
+              "quantity": 80,
+              "unit": "ml",
+              "category": "調味料"
+            }
+          ],
+          "steps": [
+            "翌日分と合わせ、厚揚げを2cm角、チンゲン菜を3cm幅、長ねぎをみじん切りにする。片栗粉を同量の水で溶く。",
+            "ひき肉を3分炒め、厚揚げ、長ねぎ、調味料、水を加えて5分煮る。",
+            "チンゲン菜を加えて2分煮て水溶き片栗粉を入れ、1分沸騰させる。半量は素早く冷まして冷蔵する。"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-18",
+      "meal_type": "昼食",
+      "dishes": [
+        {
+          "name": "厚揚げとひき肉の甘辛そぼろ煮弁当",
+          "servings": 1,
+          "ingredients": [
+            {
+              "name": "ご飯",
+              "quantity": 180,
+              "unit": "g",
+              "category": "穀類"
+            },
+            {
+              "name": "厚揚げ",
+              "quantity": 150,
+              "unit": "g",
+              "category": "豆・大豆製品"
+            },
+            {
+              "name": "豚ひき肉",
+              "quantity": 80,
+              "unit": "g",
+              "category": "肉"
+            },
+            {
+              "name": "チンゲン菜",
+              "quantity": 100,
+              "unit": "g",
+              "category": "野菜"
+            },
+            {
+              "name": "長ねぎ",
+              "quantity": 30,
+              "unit": "g",
+              "category": "野菜"
+            },
+            {
+              "name": "しょうゆ",
+              "quantity": 15,
+              "unit": "ml",
+              "category": "調味料"
+            },
+            {
+              "name": "みりん",
+              "quantity": 15,
+              "unit": "ml",
+              "category": "調味料"
+            },
+            {
+              "name": "砂糖",
+              "quantity": 4,
+              "unit": "g",
+              "category": "調味料"
+            },
+            {
+              "name": "片栗粉",
+              "quantity": 3,
+              "unit": "g",
+              "category": "調味料"
+            },
+            {
+              "name": "水",
+              "quantity": 80,
+              "unit": "ml",
+              "category": "調味料"
+            }
+          ],
+          "steps": [
+            "前夜に翌日分も含めて調理し、粗熱を取ってすぐ冷蔵した取り分けを使う。",
+            "朝、中心まで十分熱くなるよう再加熱し、ご飯も温める。",
+            "ご飯とおかずを十分冷ましてから詰め、保冷剤を添える。"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-18",
+      "meal_type": "夕食",
+      "dishes": [
+        {
+          "name": "牛肉とピーマンのオイスター炒め",
+          "servings": 1,
+          "ingredients": [
+            {
+              "name": "ご飯",
+              "quantity": 180,
+              "unit": "g",
+              "category": "穀類"
+            },
+            {
+              "name": "牛こま切れ肉",
+              "quantity": 120,
+              "unit": "g",
+              "category": "肉"
+            },
+            {
+              "name": "ピーマン",
+              "quantity": 80,
+              "unit": "g",
+              "category": "野菜"
+            },
+            {
+              "name": "赤パプリカ",
+              "quantity": 60,
+              "unit": "g",
+              "category": "野菜"
+            },
+            {
+              "name": "もやし",
+              "quantity": 100,
+              "unit": "g",
+              "category": "野菜"
+            },
+            {
+              "name": "オイスターソース",
+              "quantity": 12,
+              "unit": "ml",
+              "category": "調味料"
+            },
+            {
+              "name": "しょうゆ",
+              "quantity": 8,
+              "unit": "ml",
+              "category": "調味料"
+            },
+            {
+              "name": "酒",
+              "quantity": 10,
+              "unit": "ml",
+              "category": "調味料"
+            },
+            {
+              "name": "片栗粉",
+              "quantity": 3,
+              "unit": "g",
+              "category": "調味料"
+            },
+            {
+              "name": "ごま油",
+              "quantity": 5,
+              "unit": "ml",
+              "category": "調味料"
+            }
+          ],
+          "steps": [
+            "翌日分と合わせ、ピーマンとパプリカを細切りにし、牛肉に酒と片栗粉を揉み込む。",
+            "ごま油を熱し、牛肉を2〜3分炒める。野菜を加えてさらに2分炒める。",
+            "オイスターソースとしょうゆを加え、汁気を飛ばして1分炒める。半量は粗熱を取って冷蔵する。"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-19",
+      "meal_type": "昼食",
+      "dishes": [
+        {
+          "name": "牛肉とピーマンのオイスター炒め弁当",
+          "servings": 1,
+          "ingredients": [
+            {
+              "name": "ご飯",
+              "quantity": 180,
+              "unit": "g",
+              "category": "穀類"
+            },
+            {
+              "name": "牛こま切れ肉",
+              "quantity": 120,
+              "unit": "g",
+              "category": "肉"
+            },
+            {
+              "name": "ピーマン",
+              "quantity": 80,
+              "unit": "g",
+              "category": "野菜"
+            },
+            {
+              "name": "赤パプリカ",
+              "quantity": 60,
+              "unit": "g",
+              "category": "野菜"
+            },
+            {
+              "name": "もやし",
+              "quantity": 100,
+              "unit": "g",
+              "category": "野菜"
+            },
+            {
+              "name": "オイスターソース",
+              "quantity": 12,
+              "unit": "ml",
+              "category": "調味料"
+            },
+            {
+              "name": "しょうゆ",
+              "quantity": 8,
+              "unit": "ml",
+              "category": "調味料"
+            },
+            {
+              "name": "酒",
+              "quantity": 10,
+              "unit": "ml",
+              "category": "調味料"
+            },
+            {
+              "name": "片栗粉",
+              "quantity": 3,
+              "unit": "g",
+              "category": "調味料"
+            },
+            {
+              "name": "ごま油",
+              "quantity": 5,
+              "unit": "ml",
+              "category": "調味料"
+            }
+          ],
+          "steps": [
+            "前夜に翌日分も含めて調理し、粗熱を取ってすぐ冷蔵した取り分けを使う。",
+            "朝、中心まで十分熱くなるよう再加熱し、ご飯も温める。",
+            "ご飯とおかずを十分冷ましてから詰め、保冷剤を添える。"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-19",
+      "meal_type": "夕食",
+      "dishes": [
+        {
+          "name": "さばと大根の味噌煮",
+          "servings": 1,
+          "ingredients": [
+            {
+              "name": "ご飯",
+              "quantity": 180,
+              "unit": "g",
+              "category": "穀類"
+            },
+            {
+              "name": "さば切り身",
+              "quantity": 1,
+              "unit": "切れ",
+              "category": "魚介"
+            },
+            {
+              "name": "大根",
+              "quantity": 150,
+              "unit": "g",
+              "category": "野菜"
+            },
+            {
+              "name": "しょうが",
+              "quantity": 8,
+              "unit": "g",
+              "category": "野菜"
+            },
+            {
+              "name": "味噌",
+              "quantity": 18,
+              "unit": "g",
+              "category": "調味料"
+            },
+            {
+              "name": "砂糖",
+              "quantity": 6,
+              "unit": "g",
+              "category": "調味料"
+            },
+            {
+              "name": "酒",
+              "quantity": 30,
+              "unit": "ml",
+              "category": "調味料"
+            },
+            {
+              "name": "みりん",
+              "quantity": 15,
+              "unit": "ml",
+              "category": "調味料"
+            },
+            {
+              "name": "水",
+              "quantity": 120,
+              "unit": "ml",
+              "category": "調味料"
+            }
+          ],
+          "steps": [
+            "大根を1cm厚さのいちょう切り、しょうがを薄切りにし、さばへ熱湯を回しかける。",
+            "鍋に水、酒、みりん、砂糖、大根、しょうがを入れて沸かし、さばを皮目を上にして加える。",
+            "落とし蓋をして12分煮る。煮汁で味噌を溶いて加え、さらに5分煮て中心まで火を通す。"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "月曜昼を除き、月〜土曜の夕食と翌日昼食は同じ料理です。夕食欄と翌日昼食欄の材料を合算し、夕食時に2食分を一度に調理してください。買い物リストは両食分を集計します。ゆで卵・マヨネーズは不使用です。夏場は速やかな冷却、冷蔵、十分な再加熱、保冷剤の使用を徹底してください。"
+}

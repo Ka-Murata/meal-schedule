@@ -10,7 +10,7 @@ from pathlib import Path
 
 from meal_schedule.cli import run
 from meal_schedule.models import ValidationError, validate_plan, validate_preferences
-from meal_schedule.render import render_plan_markdown
+from meal_schedule.render import render_plan_markdown, render_plans_html
 from meal_schedule.shopping import build_shopping_list
 from meal_schedule.store import PlanStore
 
@@ -110,6 +110,20 @@ class ShoppingAndRenderTests(unittest.TestCase):
         self.assertIn("1. 材料を切る。", markdown)
         self.assertIn("## 買い物リスト", markdown)
         self.assertIn("- [ ] なす: 3本", markdown)
+
+    def test_renders_self_contained_html_view(self) -> None:
+        plan = sample_plan()
+        plan["notes"] = "作り置き <翌日分>"
+        html = render_plans_html([plan])
+        self.assertIn("<!doctype html>", html)
+        self.assertIn("保存済み献立", html)
+        self.assertIn('href="#meal-0-0"', html)
+        self.assertIn('<details class="dish" open>', html)
+        self.assertIn('type="checkbox"', html)
+        self.assertIn("なす <strong>3本</strong>", html)
+        self.assertIn("作り置き &lt;翌日分&gt;", html)
+        self.assertNotIn("<script", html)
+        self.assertNotIn("https://", html)
 
 
 class StoreAndCliTests(unittest.TestCase):
@@ -224,6 +238,47 @@ class StoreAndCliTests(unittest.TestCase):
             with redirect_stdout(output):
                 self.assertEqual(0, run(["--data-dir", directory, "show"]))
             self.assertEqual("指定期間の献立はありません\n", output.getvalue())
+
+    def test_show_writes_html_view_for_selected_period(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            data_dir = root / "plans"
+            output_path = root / "viewer" / "meal-history.html"
+            PlanStore(data_dir).save(sample_plan())
+            output = io.StringIO()
+            with redirect_stdout(output):
+                self.assertEqual(
+                    0,
+                    run(
+                        [
+                            "--data-dir",
+                            str(data_dir),
+                            "show",
+                            "--from",
+                            "2026-07-14",
+                            "--to",
+                            "2026-07-14",
+                            "--format",
+                            "html",
+                            "--output",
+                            str(output_path),
+                        ]
+                    ),
+                )
+            self.assertEqual(f"{output_path}\n", output.getvalue())
+            rendered = output_path.read_text(encoding="utf-8")
+            self.assertIn("テスト献立", rendered)
+            self.assertIn("2026-07-13〜2026-07-14", rendered)
+
+    def test_html_format_requires_output_path(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            PlanStore(directory).save(sample_plan())
+            error = io.StringIO()
+            with redirect_stderr(error):
+                self.assertEqual(
+                    2, run(["--data-dir", directory, "show", "--format", "html"])
+                )
+            self.assertIn("--output が必要", error.getvalue())
 
 
 if __name__ == "__main__":
