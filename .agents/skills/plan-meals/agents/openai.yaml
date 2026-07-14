@@ -1,0 +1,4 @@
+interface:
+  display_name: "献立プランナー"
+  short_description: "週間献立、詳しいレシピ、買い物リスト、過去の履歴をまとめて管理"
+  default_prompt: "Use $plan-meals to plan this week’s meals with recipes and a shopping list."

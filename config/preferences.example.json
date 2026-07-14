@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "household_size": 2,
+  "meals": [
+    "夕食"
+  ],
+  "allergies": [],
+  "dislikes": [],
+  "max_cooking_minutes": 45,
+  "weekly_budget_yen": 8000,
+  "week_starts_on": "monday"
+}

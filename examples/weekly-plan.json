@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "title": "2026年7月第3週の夕食",
+  "start_date": "2026-07-13",
+  "end_date": "2026-07-14",
+  "servings": 2,
+  "meals": [
+    {
+      "date": "2026-07-13",
+      "meal_type": "夕食",
+      "dishes": [
+        {
+          "name": "鶏肉と夏野菜の甘酢炒め",
+          "servings": 2,
+          "ingredients": [
+            {"name": "鶏もも肉", "quantity": 300, "unit": "g", "category": "肉・魚"},
+            {"name": "なす", "quantity": 2, "unit": "本", "category": "野菜"},
+            {"name": "ピーマン", "quantity": 2, "unit": "個", "category": "野菜"},
+            {"name": "酢", "quantity": 2, "unit": "大さじ", "category": "調味料"}
+          ],
+          "steps": [
+            "鶏肉となす、ピーマンを一口大に切る。",
+            "鶏肉を中火で焼き、火が通ったら野菜を加えて炒める。",
+            "酢と好みの甘味・しょうゆで味を調え、全体に絡める。"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-14",
+      "meal_type": "夕食",
+      "dishes": [
+        {
+          "name": "鮭ときのこの包み蒸し",
+          "servings": 2,
+          "ingredients": [
+            {"name": "生鮭", "quantity": 2, "unit": "切れ", "category": "肉・魚"},
+            {"name": "しめじ", "quantity": 1, "unit": "株", "category": "野菜"},
+            {"name": "ピーマン", "quantity": 1, "unit": "個", "category": "野菜"}
+          ],
+          "steps": [
+            "しめじをほぐし、ピーマンを細切りにする。",
+            "鮭と野菜をクッキングシートで包む。",
+            "フライパンに並べて少量の水を加え、ふたをして中火で12分蒸す。"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "傷みやすい魚を週の前半に配置する。"
+}

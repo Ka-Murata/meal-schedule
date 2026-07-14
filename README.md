@@ -1,47 +1,83 @@
-# Harness Engineering Template
+# Meal Schedule
 
-人間とコーディングエージェントが、仕様・設計判断・実行計画をコードとともに管理するためのリポジトリ運用ひな形です。
+Codexとの会話から、毎日または1週間の献立、人数分の材料、具体的な調理手順、集約した買い物リストを作り、確定した献立を後から確認できるローカルプロジェクトです。
 
-## サンプルアプリ
+献立の文章はCodexが作り、Python CLIが形式、日付、人数、禁止食材の単純一致を検証します。確定した履歴は `data/plans/` のJSONとして残るため、新しいCodexセッションからも参照できます。外部サービスへの送信は行いません。
 
-このブランチ（`feat/sample-project`）は、ひな形の利用例として作成するサンプルアプリです。
+## 必要環境
 
-[サンプルアプリを見る](https://github.com/Murata-11/herness-engineering/tree/feat/sample-project)
+- Python 3.10以上（追加パッケージ不要）
+- リポジトリ内スキルを読み込めるCodex環境
 
-## このテンプレートが提供するもの
+## 最初の設定
 
-- 人間とAIの作業ルール・正本への入口
-- 仕様、設計判断、実行計画の記入用テンプレート
-- 変更理由・影響・検証結果を残すPull Request形式
+利用者設定の例をコピーし、人数、対象の食事、アレルギー、苦手な食材などを編集します。
 
-## 想定する利用者
+```bash
+cp config/preferences.example.json config/preferences.json
+```
 
-- コーディングエージェントを使った開発を、再現可能な形で進めたいチーム
-- プロダクトや設計の判断をチャット履歴だけに残したくないチーム
-- 新しく参加した人やエージェントが、短時間で作業文脈を把握できるようにしたいチーム
+`config/preferences.json` は個人設定のためGit管理対象外です。アレルギーの単純一致検査を補助しますが、医療上の安全は保証しません。曖昧な原材料や派生食材は必ず個別に確認してください。
 
-## 使い方
+## Codexから使う
 
-1. このリポジトリを複製し、対象プロダクトの目的・利用者・起動方法をここへ記載します。
-2. `AGENTS.md`に不変条件と検証コマンドを、[ARCHITECTURE.md](ARCHITECTURE.md)に実装領域と依存方向を追加します。
-3. [ドキュメントの作業手順](docs/README.md)に従い、必要な仕様・設計・計画を作成します。
+このリポジトリをCodexで開き、自然文で依頼します。`.agents/skills/plan-meals/` が献立作成、履歴参照、確認後保存の手順を提供します。
 
-## 情報の置き場所
+```text
+今週の夕食の献立を考えて。レシピと買い物リストも詳しく教えて。
+```
 
-| 情報 | 正本 | 役割 |
-| --- | --- | --- |
-| リポジトリの概要・導入方法 | `README.md` | 人とエージェントの最初の入口 |
-| 作業時の必須ルール | `AGENTS.md` | 簡潔な運用ルールと詳細情報への案内 |
-| 全体構成・依存方向 | [ARCHITECTURE.md](ARCHITECTURE.md) | 領域の責務、実行入口、依存ルールの案内 |
-| Pull Requestの記載項目 | `.github/PULL_REQUEST_TEMPLATE.md` | 変更理由・影響・検証を揃える |
-| プロダクト仕様 | [`docs/product-specs/`](docs/product-specs/index.md) | 利用者の振る舞い、スコープ、受け入れ条件 |
-| 設計判断 | [`docs/design-docs/`](docs/design-docs/index.md) | 背景、選択肢、決定、影響 |
-| 実行計画 | [`docs/exec-plans/`](docs/exec-plans/index.md) | 作業の範囲、進捗、決定ログ、検証 |
-| 品質 | [docs/QUALITY.md](docs/QUALITY.md) | 品質条件、検証の証拠、既知課題 |
-| 文書テンプレート | [docs/templates/](docs/templates/README.md) | 新しい仕様・判断・計画のコピー元 |
+Codexは設定と直近28日の履歴を確認し、日付付き献立を提案します。初回提案は保存しません。内容を確認してから次のように依頼します。
 
-重要な判断はMarkdownに残し、繰り返すルールはテスト・リンター・テンプレートなどで機械的に守ります。変更完了には、必要な文書更新と検証結果を含めます。
+```text
+この献立で確定して保存して。
+```
 
-## 変更への参加
+後から確認する場合:
 
-変更前に関連する仕様・実装・設定を確認します。Pull Requestは日本語で作成し、[PRテンプレート](.github/PULL_REQUEST_TEMPLATE.md)に従います。必須ルールは[AGENTS.md](AGENTS.md)を参照してください。
+```text
+先週の献立を見せて。
+```
+
+設定がない場合、Codexは少なくとも人数、対象の食事、アレルギーの有無を確認します。
+
+## CLIを直接使う
+
+提案JSONの形式は [examples/weekly-plan.json](examples/weekly-plan.json) を参照してください。
+
+```bash
+# 提案を検証する
+python3 -m meal_schedule --preferences config/preferences.json validate examples/weekly-plan.json
+
+# 利用者が確定した提案を保存する
+python3 -m meal_schedule --preferences config/preferences.json save examples/weekly-plan.json
+
+# 指定期間の献立、レシピ、手順、買い物リストを表示する
+python3 -m meal_schedule --preferences config/preferences.json show --from 2026-07-13 --to 2026-07-19
+
+# 次の提案で重複を避けるため、最近の料理名を表示する
+python3 -m meal_schedule --preferences config/preferences.json recent-dishes --days 28 --as-of 2026-07-19
+```
+
+共通オプション `--data-dir` で履歴ディレクトリを変更できます。既存期間を置き換える `--overwrite` は、上書きを明示的に確認した場合だけ使用してください。
+
+## データ
+
+| パス | 内容 |
+| --- | --- |
+| `config/preferences.example.json` | 利用者設定の記入例 |
+| `config/preferences.json` | 実際の個人設定（Git管理外） |
+| `data/plans/YYYY-MM-DD.json` | 開始日ごとの確定済み献立履歴 |
+| `examples/weekly-plan.json` | 提案JSONの例 |
+
+買い物リストは保存済み材料から表示時に再計算します。同じ食材名・単位・カテゴリの数量を集約し、利用元の料理を併記します。
+
+## 開発と検証
+
+```bash
+python3 -m unittest discover -s tests -v
+python3 -m compileall -q meal_schedule tests
+python3 /home/vscode/.codex/skills/.system/skill-creator/scripts/quick_validate.py .agents/skills/plan-meals
+```
+
+領域の責務と依存方向は [ARCHITECTURE.md](ARCHITECTURE.md)、利用者要件は [献立計画アシスタント仕様](docs/product-specs/meal-planning-assistant.md)、品質条件は [docs/QUALITY.md](docs/QUALITY.md) を参照してください。

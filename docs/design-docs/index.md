@@ -7,6 +7,7 @@
 | 文書 | 状態 | 用途 |
 | --- | --- | --- |
 | [適応的な開発ハーネスをスキルで補助する](2026-07-12-adaptive-harness-guide.md) | accepted | AI-DLCの適応性を取り入れるスキルの役割と境界 |
+| [献立計画アシスタントの利用入口と保存方式](2026-07-14-meal-planning-interface.md) | accepted | Codexスキル、ローカルCLI、JSON履歴、確認後保存の境界 |
 
 ## AIの手順
 
